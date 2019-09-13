@@ -234,6 +234,7 @@ public extension _ImageRow {
 
 /// A selector row where the user can pick an image
 public final class ImageRow: _ImageRow<ImageCell>, RowType {
+  public var didSetImage: (_ image: UIImage?) -> () = { _ in }
   public required init(tag: String?) {
     super.init(tag: tag)
   }
